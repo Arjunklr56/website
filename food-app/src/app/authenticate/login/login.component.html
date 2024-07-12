@@ -1,0 +1,27 @@
+<body>
+  <div class="contain">
+    <div class="login p-4">
+      <form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
+        <h1>Login</h1>
+        <hr />
+        <p>The Fastest Delivery In Your City</p>
+        <label> UserName</label>
+        <input id="userName" formControlName="userName" class="form-control" />
+        <div *ngIf="loginForm.get('userName')?.invalid && loginForm.get('userName')?.touched" style="color: red;font-size: 12px;">
+          UserName is required.
+        </div>
+        <label> Password</label>
+        <input id="password" formControlName="password" class="form-control" />
+        <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" style="color: red;font-size: 12px;">
+          password is required.
+        </div>
+        <button class="">Submit</button>
+        <p class="signup-text">
+          New to our community ?<span class="signuplink" routerLink="/signup"
+            >Sign Up</span
+          >
+        </p>
+      </form>
+    </div>
+  </div>
+</body>

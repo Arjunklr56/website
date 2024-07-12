@@ -1,0 +1,31 @@
+<div class="loding" *ngIf="isLoading">
+  <div class="loader"></div>
+</div>
+
+<!-- =========== -->
+<div class="Container">
+  <div class="title pb-3">Top Picks</div>
+  <div>
+    <div class="Card mb-4" *ngFor="let listFood of GetFoodItemDetails">
+      <div class="content">
+        <div class="first-content">
+          <p class="menuItemName">{{ listFood.menuItemName }}</p>
+          <div class="content-icon">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+          </div>
+          <b><i class="bi bi-currency-rupee"></i>{{ listFood.price }}</b>
+          <p class="description">{{ listFood.description }}</p>
+          <div class="content-btns">
+            <button class="btn btn-info btn-sm" (click)="AddToCart(listFood)">
+              AddToCart
+            </button>
+          </div>
+        </div>
+        <img [src]="listFood.photoUrl" alt="foodimage" />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------------- -->

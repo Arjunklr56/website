@@ -1,0 +1,188 @@
+ 
+<body>
+  <div class="loding" *ngIf="isLoading">
+    <div class="loader"></div>
+  </div>
+  <!-- Heading-Content -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="MasterHeading-Content">
+        <div class="promo-text">
+          Restaurants <br />
+          Near Me
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- home-pg-content -->
+    <div class="home-pg-content">
+      <h4><b class="title">What's on your mind?</b></h4>
+      <div class="first-content">
+        <div
+          class="food-logo ps-4 pe-4"
+          *ngFor="let list of foodCategoryArray"
+          (click)="navigaetToRestaurentFoods(list.categoryId)"
+        >
+          <img [src]="list.photoUrl" alt="" />
+          <b class="pt-3">{{ list.categoryName }}</b>
+        </div>
+        <hr />
+      </div>
+
+      <hr class="hr" />
+      <h4><b  class="title">Top restaurant chains </b></h4>
+      <div class="second-content">
+        <div
+          class="restauran-card"
+          *ngFor="let restaurantList of AllRestaurants"
+          (click)="RestaurantDetails(restaurantList.restaurantID)"
+        >
+          <button data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <span
+              *ngIf="isLoading"
+              class="spinner-border spinner-border-sm"
+              role="status"
+              aria-hidden="true"
+            ></span>
+            <!-- <span class="sr-only">Loading...</span> -->
+
+            <b>{{ restaurantList.name }}</b>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="third-content">
+      <hr class="hr" />
+      <h4 class="mt-2 mb-4"><b  class="title">Top RestaurantBy Menu</b></h4>
+      <div class="row">
+        <div class="col-md-3 card-colum" *ngFor="let menuList of FoodMenu">
+          <div class="card mb-5" (click) ="MenuByRestaurantId(menuList.restaurantID)">
+            <img [src]="menuList.photoUrl" class="card-image" />
+            <p class="litblack">
+              <span
+                ><i class="bi bi-currency-rupee"></i>{{ menuList.price }}</span
+              >
+            </p>
+            <!-- <p></p> -->
+
+            <div class="card-content">
+              <h4 class="restaurant-name">
+                {{ menuList.menuItemName }}
+              </h4>
+              <p class="description">{{ menuList.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <div class="Footer">
+    <div class="row g-0 p-3" style="background-color: rgb(208, 208, 208)">
+      <div class="col-md-6 Footer-header">
+        <h4>For better experience,download <br />the Swiggy app now</h4>
+      </div>
+      <div class="col-md-6 Footer-header">
+        <div class="download-buttons">
+          <a href="#" class="download-button">
+            <i class="bi bi-google-play pe-2"></i>
+            <span>GET IT ON<br />Google Play</span>
+          </a>
+          <a href="#" class="download-button">
+            <i class="bi bi-apple pe-2"></i>
+            <span>Download on the<br />App Store</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer pt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 text-center">
+            <div class="footer-img">
+ 
+            </div>
+            <p class="footer-info-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo
+              libero viverra dapibus odio sit malesuada in quis. Arcu tristique
+              elementum viverra integer id.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3 text-center detail-text">
+            <h5>Opening Restaurant</h5>
+            <p>Sat-Wet: 09:00am-10:00PM</p>
+            <p>Thursday: 09:00am-11:00PM</p>
+            <p>Friday: 09:00am-8:00PM</p>
+          </div>
+          <div class="col-md-3 detail-text text-center">
+            <h5>User Link</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Order Delivery</a></li>
+              <li><a href="#">Payment & Tex</a></li>
+              <li><a href="#">Terms of Services</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 detail-text text-center">
+            <h5>Contact Us</h5>
+            <address>
+              1234 Country Club Ave<br />
+              NC 123456, London, UK<br />
+              +0123 456 7891
+            </address>
+          </div>
+        </div>
+      </div>
+    </footer>
+ 
+  </div>
+</body>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div
+      class="modal-content"
+      style="margin-top: 250px; height: 350px; color: black"
+    >
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="dialog-content" *ngIf="RestaurantsDetails">
+          <b><span>RestaurantName</span>:{{ RestaurantsDetails.name }}</b>
+          <p><span>Address</span>:{{ RestaurantsDetails.address }}</p>
+          <p><span>contactNo</span>:{{ RestaurantsDetails.contactNo }}</p>
+          <p><span>openingHours</span>:{{ RestaurantsDetails.openingHours }}</p>
+          <p><span>cuisineType</span>:{{ RestaurantsDetails.cuisineType }}</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

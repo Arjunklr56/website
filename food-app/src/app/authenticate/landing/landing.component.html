@@ -1,0 +1,376 @@
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    /* background-color: #ff6701; */
+    background-image: url(../../../assets/images/ooooo.jpg);
+    /* repeating-linear-gradient(
+          to right, transparent 0 100px,
+          #25283b22 100px 101px
+      ),
+      repeating-linear-gradient(
+          to bottom, transparent 0 100px,
+          #25283b22 100px 101px
+      ); */
+  }
+
+  body::before {
+    /* border: 1px solid; */
+    position: absolute;
+    width: min(500px, 90vw);
+    top: 36%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    content: "";
+    background-image: url(../../../assets/images/Untitled-1\ 1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    /* background-size: cover; */
+    pointer-events: none;
+  }
+</style>
+<body>
+  <div class="container-fluid g-0">
+    <!-- Navigation Section -->
+     
+      <nav>
+        <div class="nav-logo pt-2">
+          <img
+            src="../../../assets/images/Foodiyo-logo.png"
+            alt=""
+            class="logo"
+          />
+        </div>
+        <div class="navText">
+          <button class="btn btn-sm  ">Home</button>
+          <button class="btn btn-sm" routerLink="/signup">SignUp</button>
+          <button class="btn btn-sm">Contact</button>
+        </div>
+        <div class="navcontent">
+          <button
+            class="btn btn-sm"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+          >
+            <div class="offcanvas-header">
+              <div class="sidebar-icon" id="offcanvasRightLabel">
+                <img
+                  src="assets/images/Food-logo-pro.png"
+                  alt=""
+                  class="logo"
+                />
+              </div>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              >
+                ❌
+              </button>
+            </div>
+            <div class="offcanvas-body">
+              <button class="btn btn-sm mt-2">Home</button>
+              <button class="btn btn-sm mt-2" routerLink="/signup">
+                SignUp/Login
+              </button>
+              <button class="btn btn-sm mt-2">Contact</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+   
+  </div>
+  <div class="container-fluid">
+    <div class="banner">
+      <div class="slider" style="--quantity: 10">
+        <div class="item" style="--position: 1">
+          <img src="../../../assets/images/banner-img-1.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 2">
+          <img src="../../../assets/images/banner-img-2.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 3">
+          <img src="../../../assets/images/Burger-png.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 4">
+          <img src="../../../assets/images/banner-img-3.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 5">
+          <img src="../../../assets/images/banner-img-4.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 6">
+          <img src="../../../assets/images/banner-img-5.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 7">
+          <img src="../../../assets/images/banner-img-6.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 8">
+          <img src="../../../assets/images/banner-img-7.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 9">
+          <img src="../../../assets/images/banner-img-1.jpg" alt="" />
+        </div>
+        <div class="item" style="--position: 10">
+          <img src="../../../assets/images/banner-img-3.jpg" alt="" />
+        </div>
+      </div>
+      <div class="content">
+        <h1 data-content="Next Favorite Restaurant">
+          Next Favorite Restaurant
+        </h1>
+
+        <div class="model"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Section -->
+  <!-- <div class="container-fluid content">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="first-content">
+          <h1>Find Your</h1>
+          <span>Next Favorite Restaurant</span>
+
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
+            possimus?
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="second-content">
+          <img src="../../../assets/images/Untitled-1 1.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div> -->
+</body>
+<!-- Information Section -->
+<div class="container cont">
+  <h3 class="text-orange text-center pt-3">Services</h3>
+
+  <div class="row info-section mt-5">
+    <div class="col-md-4 info-colum">
+      <div class="info-box p-3">
+        <div class="info-icon">
+          <i class="bi bi-clock"></i>
+        </div>
+        <div class="info-text">
+          <h3>Today 10:00am - 10:00pm</h3>
+          <p>Working Time</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 info-colum">
+      <div class="divider mt-3"></div>
+      <div class="info-box p-3">
+        <div class="info-icon">
+          <i class="bi bi-geo-alt"></i>
+        </div>
+        <div class="info-text">
+          <h3>Thrissur, Kochi</h3>
+          <p>Our Location</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 info-colum">
+      <div class="divider mt-3"></div>
+
+      <div class="info-box p-3">
+        <div class="info-icon">
+          <i class="bi bi-telephone"></i>
+        </div>
+        <div class="info-text">
+          <h3>+91 1234567891</h3>
+          <p>Phone Number</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Services Section -->
+  <section class="container services-section text-center">
+    <h2 class="pt-4 pb-4">Why Choose Our Favorite Food</h2>
+    <div class="row">
+      <div class="col-md-4 p-4 service-colum">
+        <div class="service-box">
+          <div class="service-icon">
+            <i class="bi bi-h-square"></i>
+          </div>
+          <h3>Qualityfull Food</h3>
+          <p>
+            But I must explain to you how all this mistaken idea of denouncing
+            pleasur and praisising pain was bron.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 p-4 service-colum">
+        <div class="service-box">
+          <div class="service-icon">
+            <i class="bi bi-heart"></i>
+          </div>
+          <h3>Healthy Food</h3>
+          <p>
+            But I must explain to you how all this mistaken idea of denouncing
+            pleasur and praisising pain was bron.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 p-4 service-colum">
+        <div class="service-box">
+          <div class="service-icon">
+            <i class="bi bi-truck"></i>
+          </div>
+          <h3>Fast Delivery</h3>
+          <p>
+            But I must explain to you how all this mistaken idea of denouncing
+            pleasur and praisising pain was bron.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Top Restaurant Section -->
+  <section>
+    <h3 class="landin-heading mt-4">Top restaurant</h3>
+    <div class="row card-images">
+      <div class="col-md-4 p-3 colums mt-4">
+        <div class="card lanting-card p-2">
+          <div class="card-img">
+            <img
+              src="../../../assets/images/restuarent-img-11.jpg"
+              alt=""
+              class=""
+            />
+          </div>
+          <b>Paragon Restaurant </b>
+        </div>
+      </div>
+      <div class="col-md-4 p-3 colums mt-4">
+        <div class="card lanting-card p-2">
+          <div class="card-img">
+            <img
+              src="../../../assets/images/restuarent-img-10.jpg"
+              alt=""
+              class=""
+            />
+          </div>
+          <b>Dal Roti - Fort Kochi</b>
+        </div>
+      </div>
+      <div class="col-md-4 p-3 colums mt-4">
+        <div class="card lanting-card p-2">
+          <div class="card-img">
+            <img
+              src="../../../assets/images/restuarent-img-12.jpg"
+              alt=""
+              class=""
+            />
+          </div>
+          <b>Dhe Puttu - Ernakulam</b>
+        </div>
+      </div>
+    </div>
+    <div class="row second-row">
+      <div class="col-md-4 p-3 colums mt-4">
+        <div class="card lanting-card p-2">
+          <div class="card-img">
+            <img src="../../../assets/images/resturent-7.jpg" alt="" class="" />
+          </div>
+          <b>Mothers Veg Plaza</b>
+        </div>
+      </div>
+      <div class="col-md-4 p-3 colums mt-4">
+        <div class="card lanting-card p-2">
+          <div class="card-img">
+            <img
+              src="../../../assets/images/restuarent-img-9.jpg"
+              alt=""
+              class=""
+            />
+          </div>
+          <b>The Rice Boat</b>
+        </div>
+      </div>
+      <div class="col-md-4 p-3 colums mt-4">
+        <div class="card lanting-card p-2">
+          <div class="card-img">
+            <img
+              src="../../../assets/images/restuarent-img-8.jpg"
+              alt=""
+              class=""
+            />
+          </div>
+          <b>Rahmath Restaurant </b>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- Footer Section -->
+<footer class="footer bg-light pt-4 mt-5">
+  <div class="container-fluid">
+    <div class="row pt-4 pb-4">
+      <div class="col-md-3 footer-colums text-center">
+        <img
+          src="../../../assets/images/Foodiyo__z1.png"
+          alt="Logo"
+          class="footerlogopng"
+        />
+        <p class="footer-info-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo
+          libero viverra dapibus odio sit malesuada in quis. Arcu tristique
+          elementum viverra integer id.
+        </p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-md-3 footer-colums  text-center detail-text">
+        <h5>Opening Restaurant</h5>
+        <p>Sat-Wet: 09:00am-10:00PM</p>
+        <p>Thursday: 09:00am-11:00PM</p>
+        <p>Friday: 09:00am-8:00PM</p>
+      </div>
+      <div class="col-md-3 footer-colums text-center">
+        <h5>User Link</h5>
+        <ul  class="list-unstyled">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Order Delivery</a></li>
+          <li><a href="#">Payment & Tex</a></li>
+          <li><a href="#">Terms of Services</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 footer-colums text-center">
+        <h5>Contact Us</h5>
+        <address>
+          1234 Country Club Ave<br />
+          NC 123456, London, UK<br />
+          +0123 456 7891
+        </address>
+      </div>
+    </div>
+  </div>
+</footer>

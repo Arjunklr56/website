@@ -1,0 +1,28 @@
+<div class="container cart ps-5 pe-5">
+  <div class="row">
+    <div class="cart-titile pb-4">Your Cart</div>
+    <div class="col-md-12 mb-4" *ngFor="let details of cartDetails">
+      <div class="cart-card p-3">
+        <div class="cart-img"><img [src]="details.photoUrl" alt="" /></div>
+        <div class="cart-menuItemName">{{ details.menuItemName }}</div>
+        <div class="food-price">
+          <i class="bi bi-currency-rupee"></i>{{ details.price }}
+        </div>
+        <div class="quantity-updater mt-2 mb-2">
+          <button (click)="decrement()">-</button>
+          <input type="number" [value]="quantity" readonly>
+          <button (click)="increment()">+</button>
+        </div>
+        <div class="cart-btn">
+          <button
+            class="btn btn-success btn-sm"
+            (click)="placeOrder(details.restaurantID)"
+          >
+            placeOrder
+          </button>
+        </div>
+        <b></b>
+      </div>
+    </div>
+  </div>
+</div>

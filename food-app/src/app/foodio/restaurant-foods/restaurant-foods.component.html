@@ -1,0 +1,23 @@
+<div class="loding" *ngIf="isLoading">
+  <div class="loader"></div> 
+ </div>
+<div class="container">
+  <header>
+    <h3 class="tilte-name pb-3">Restaurants to explore</h3>
+  </header>
+  <div class="row">
+    <div class="col-md-3 pt-3 colum" *ngFor="let food of FoodCategory">
+      <div class="card mb-5" (click)="foodDetails(food.restaurantID)">
+        <img [src]="food.photoUrl" class="card-image" />
+        <p class="litblack"></p>
+        <div class="card-content">
+          <h4 class="restaurant-name">
+           <span class="pe-2">Outlet</span>- {{ food.restaurantName }}
+          </h4>
+          <p class="description">{{ food.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 

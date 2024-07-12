@@ -1,0 +1,72 @@
+.cart-card {
+  border: 1px solid rgb(217, 216, 216);
+  border-radius: 20px;
+  width: 700px;
+  margin: auto;
+}
+.cart-card:hover {
+  box-shadow: 0 4px 6px rgb(154, 152, 152);
+  transition: all 0.7s;
+}
+.cart-titile {
+  font-size: 20px;
+  font-weight: 700;
+  color: orange;
+  text-align: center;
+}
+.cart-img img {
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+}
+.cart-menuItemName {
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+}
+.food-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+}
+@media (max-width: 576px) {
+  .cart-img img {
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+  }
+  .cart-card {
+    width: 100%;
+  }
+}
+.quantity-updater {
+  /* border: 1px solid; */
+  border-radius: 10px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quantity-updater button {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: orange;
+  color: #fff;
+  padding: 3px;
+  border-radius: 3px;
+}
+.quantity-updater input {
+  height: 20px;
+  width: 30px;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

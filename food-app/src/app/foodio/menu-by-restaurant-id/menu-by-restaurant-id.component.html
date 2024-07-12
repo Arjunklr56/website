@@ -1,0 +1,42 @@
+<div class="loding" *ngIf="isLoading">
+  <div class="loader"></div>
+</div>
+
+<!-- =========== -->
+<div class="Container">
+  <div class="title">Menu<i class="bi bi-menu-up ps-2"></i></div>
+  <div>
+    <div
+      class="Card mt-4 "
+      *ngFor="let MenuByRestaurant of MenuByRestaurantData"
+    >
+      <div class="content">
+        <div class="first-content">
+          <p class="menuItemName">{{ MenuByRestaurant.menuItemName }}</p>
+          <div class="content-icon">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+          </div>
+          <p class="categoryName">
+            <i class="bi bi-tag pe-2"></i>{{ MenuByRestaurant.categoryName }}
+          </p>
+          <b
+            ><i class="bi bi-currency-rupee"></i>{{ MenuByRestaurant.price }}</b
+          >
+          <p class="description" >{{ MenuByRestaurant.description }}</p>
+          <!-- <p class="description" id="text">{{ paddedDescription }}</p> -->
+          <div class="content-btns">
+            <button
+              class="btn btn-info btn-sm"
+              (click)="onAddCart(MenuByRestaurant)"
+            >
+              AddToCart
+            </button>
+          </div>
+        </div>
+        <img [src]="MenuByRestaurant.photoUrl" alt="foodimage" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<body>
+  <div class="contain">
+    <div class="login ps-4 pe-4 pt-3 pb-3">
+      <form [formGroup]="signUpForm" (ngSubmit)="signUpFormSubmit()">
+        <h1>signup</h1>
+        <hr />
+        <p>The Fastest Delivery In Your City</p>
+        <label>userName</label>
+        <input id="userName" formControlName="userName" class="form-control" />
+        <div *ngIf="signUpForm.get('role')?.invalid && signUpForm.get('role')?.touched" style="color: red;font-size: 12px;">
+          Name is required.
+        </div>
+        <label>role</label>
+        <input id="role" formControlName="role" class="form-control" />
+        <div *ngIf="signUpForm.get('role')?.invalid && signUpForm.get('role')?.touched"  style="color: red;font-size: 12px;">
+          Name is required.
+        </div>
+        <label>password</label>
+        <input id="password" formControlName="password" class="form-control" />
+        <div *ngIf="signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched"  style="color: red;font-size: 12px;">
+          Name is required.
+        </div>
+        <label>mobileNo</label>
+        <input id="mobileNo" formControlName="mobileNo" class="form-control" />
+        <div *ngIf="signUpForm.get('mobileNo')?.invalid && signUpForm.get('mobileNo')?.touched" style="color: red;font-size: 12px;">
+          Name is required.
+        </div>
+        <label>emailId</label>
+        <input id="emailId" formControlName="emailId" class="form-control" />
+        <div *ngIf="signUpForm.get('emailId')?.invalid && signUpForm.get('emailId')?.touched"  style="color: red;font-size: 12px;">
+          Name is required.
+        </div>
+        <!-- <label>restaurantId</label>
+            <input  id="restaurantId" formControlName="restaurantId"/> -->
+        <button type="submit">Submit</button>
+        <p class="signup-text pt-3">
+          Already have an accout ?<span routerLink="/login" class="LoginLink"
+            >Sign In</span
+          >
+        </p>
+      </form>
+    </div>
+  </div>
+</body>

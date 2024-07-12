@@ -1,0 +1,99 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url(../../../assets/images/pexels-ella-olsson-572949-1640773.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ============ */
+.contain {
+  /* margin-top: 30px; */
+  width: 400px;
+  display: flex;
+  max-width: 850px;
+  /* background:transparent; */
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.login {
+  width: 100%;
+  margin: auto;
+}
+form {
+  width: 100%;
+  /* margin: 60px auto; */
+  color: #000000;
+}
+h1 {
+  /* margin: 20px; */
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: orange;
+  
+}
+
+p {
+  text-align: center;
+}
+hr {
+  border-top: 2px solid tomato;
+}
+
+form label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px;
+}
+input {
+  width: 100%;
+  margin: 2px;
+  border: 1px solid orange;
+  /* outline: none; */
+  /* padding: 8px;
+  border-radius: 5px;
+  border: 1px solid gray; */
+}
+button {
+  border: none;
+  outline: none;
+  padding: 8px;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: orange;
+  align-items: center;
+  font-weight: 700;
+}
+
+p {
+  margin: 20px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+/* </span> */
+@media (max-width: 600px) {
+}
+.signuplink {
+  color: orange;
+  font-weight: 500;
+  cursor: pointer;
+}
+.signup-text {
+  color: gray;
+  font-weight: 500;
+}
