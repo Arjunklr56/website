@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Bahnschrift";
+    }
+    .container {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url(bgpic.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .filter {
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #1a3b75;
+      opacity: 0.6;
+    }
+    .login_card {
+      max-width: 100%;
+      height: 650px;
+      width: 650px;
+      border-radius: 4rem;
+      background-color: #fff;
+      z-index: 999;
+    }
+    .login_logo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 70px;
+    }
+    .login_logo img {
+      height: 80px;
+      object-fit: cover;
+    }
+    .input_box {
+      width: 100%;
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid rgb(176, 175, 175);
+      outline: none;
+      font-size: 15px;
+    }
+    .login_body {
+      height: auto;
+      width: 100%;
+      padding: 40px 100px;
+    }
+    .login_body form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+    }
+    .form_checkbox {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .submit-btn {
+      width: 100%;
+      height: 50px;
+      border-radius: 5px;
+      color: #fff;
+      background-color: #5b9bd5;
+      outline: none;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+    .submit-btn p {
+      font-family: 700;
+      font-size: 20px;
+    }
+    .forgot_passwors {
+      text-decoration: none;
+      font-size: 15px;
+      color: gray;
+    }
+    .or {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .line {
+      flex: 1;
+      border: 1px solid rgb(168, 166, 166);
+      width: 120px;
+      position: relative;
+    }
+    .sign-in {
+      padding: 5px 15px;
+      background-color: #1a3b75;
+      color: white;
+      border-radius: 20px;
+      position: relative;
+      z-index: 1;
+      font-family: "Bahnschrift";
+
+      font-weight: 400;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .social-icon {
+      background-color: #468fda;
+      color: white;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    .social-icon i {
+      color: #fff;
+    }
+    .another-acc {
+      width: 100%;
+      text-align: start;
+    }
+    .another-acc p {
+      font-size: 15px;
+      font-family: "Bahnschrift";
+      font-weight: 400;
+      color: #666666;
+    }
+    .another-acc p a {
+      text-decoration: none;
+      font-size: 18px;
+      font-family: "Bahnschrift";
+      color: #468fda;
+    }
+    @media (max-width: 576px) {
+      .container {
+        padding: 20px;
+      }
+      .login_logo img {
+        height: 40px;
+      }
+      .login_card {
+        max-width: 100%;
+        height: auto;
+        width: 650px;
+        border-radius: 3rem;
+      }
+      .login_logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 70px;
+      }
+      .login_body {
+        height: 100%;
+        width: 100%;
+        padding: 20px 30px;
+      }
+      .login_body form {
+        gap: 25px;
+      }
+      .line {
+        flex: 1;
+        border: 1px solid rgb(168, 166, 166);
+        width: 60px;
+        position: relative;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="filter"></div>
+      <div class="login_card">
+        <div class="login_logo">
+          <img src="ExpenseHive-l.png" alt="" srcset="" />
+        </div>
+        <div class="login_body">
+          <form action="">
+            <input type="text" class="input_box" placeholder="User Name" />
+            <input type="text" class="input_box" placeholder="Password" />
+            <div class="form_checkbox">
+              <input type="checkbox" />
+              <a href="" class="forgot_passwors">forgot passwords</a>
+            </div>
+            <button class="submit-btn">
+              <img src="./Vector.png" alt="" />
+              <p class="mt-3">SIGN IN</p>
+            </button>
+            <div class="or">
+              <div class="line"></div>
+              <div class="sign-in">or sign-in with</div>
+              <div class="line"></div>
+            </div>
+            <div class="icons">
+              <div class="social-icons">
+                <a href="#" class="social-icon"><i class="bi bi-google"></i></a>
+                <a href="#" class="social-icon"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+                <a href="#" class="social-icon"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" class="social-icon"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="#" class="social-icon"><i class="bi bi-xing"></i></a>
+              </div>
+            </div>
+            <div class="another-acc">
+              <p>Don't have an account?<a href="">Sign Up</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
