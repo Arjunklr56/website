@@ -20,7 +20,7 @@ export class AuthserviceService {
    * @param userData The user data to be registered.
    * @returns An Observable of type TApiResponse<User[]> containing the response.
    */
-  signUPUser(userData: any): Observable<TApiResponse<User[]>> {
+  signUPUser(userData: User): Observable<TApiResponse<User[]>> {
     return this.http.post<TApiResponse<User[]>>(
       '/api/zomato/AddNewUser',
       userData

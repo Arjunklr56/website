@@ -3,7 +3,7 @@ export type TApiResponse<T> = {
   result: boolean;
   data: T;
 };
-export interface User {
+export type User = {
   userId: 0;
   userName: string;
   role: string;
@@ -11,8 +11,8 @@ export interface User {
   mobileNo: string;
   emailId: string;
   restaurantId: 0;
-}
- 
+};
+
 export type loginUser = {
   userName: string;
   password: string;
